@@ -131,7 +131,7 @@ a {
 }
 
 .contact-map {
-    max-width: 600px;
+    max-width: 100%;
     margin: 20px;
 }
 
@@ -168,4 +168,25 @@ footer button:hover {
 .social-icons a {
     margin: 0 10px;
     font-size: 1.5rem;
+    color: white;
+}
+
+.social-icons a:hover {
+    color: #aaa;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .front-page h1 {
+        font-size: 2.5rem;
+    }
+
+    .front-page p {
+        font-size: 1.2rem;
+    }
+
+    .about-content, .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
 }
