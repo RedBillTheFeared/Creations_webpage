@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creations</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-j6Erf6v3+M5d4xywYPtIOnS9dPzot8GDFsGIPJQUqQpDPURpyyD14sbkR8B1RfRSle3IS6Iq4sx/OBkE/6+TrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" />
+
     <!-- Schema.org Markup for LocalBusiness and Website -->
     <script type="application/ld+json">
     {
@@ -36,7 +36,7 @@
             "https://www.instagram.com/creations_4all/"
         ],
         "openingHours": "Mo-Fr 09:00-17:00",
-        "priceRange": "$$"  // Indicate the price range for your services
+        "priceRange": "$$"
     }
     </script>
 
@@ -125,26 +125,27 @@
 
     <!-- Tawk.to Script -->
     <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/667646d79d7f358570d234f4/1i0v09ev4';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/667646d79d7f358570d234f4/1i0v09ev4';
+            s1.charset = 'UTF-8';
+            // Remove the cross-origin attribute which might be causing CORS issues
+            // s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
 
     <script>
-        document.querySelector('.learn-more').addEventListener('click', function(event) {
+        document.querySelector('.learn-more').addEventListener('click', function (event) {
             event.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             let mapContainer = document.getElementById('map-container');
             let observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
