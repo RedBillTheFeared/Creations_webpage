@@ -6,7 +6,7 @@
     <title>Creations</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" />
-    
+
     <!-- Schema.org Markup for LocalBusiness and Website -->
     <script type="application/ld+json">
     {
@@ -15,8 +15,8 @@
         "name": "Creations4All",
         "description": "Creative Design Consultancy - Revolutionizing the way you plan your spaces.",
         "url": "https://creations4all.in",
-        "logo": "https://creations4all.in/logo.png",  
-        "image": "https://creations4all.in/cover-image.jpg",
+        "logo": "https://creations4all.in/logo.png",  // Replace with your actual logo URL
+        "image": "https://creations4all.in/cover-image.jpg",  // Replace with a representative image URL
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Jeevan Plaza, Vipul Khand 2",
@@ -63,32 +63,15 @@
             font-family: Arial, sans-serif;
         }
         
-        .front-page, .about-us, .client-testimonials, .contact-us {
-            padding: 20px;
-            box-sizing: border-box;
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-        }
-        
-        header, section, footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
         .about-content, .contact-content {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
 
         .about-box, .contact-info, .subscribe {
+            flex: 1 1 300px;
             margin: 10px;
-            width: 100%;
-            max-width: 400px;
-            padding: 10px;
             box-sizing: border-box;
         }
 
@@ -96,17 +79,12 @@
             word-wrap: break-word; /* Prevent long texts from overflowing */
         }
 
-        .social-icons a {
-            margin: 0 5px;
+        #map-container {
+            width: 100%;
         }
 
-        .learn-more {
-            padding: 10px 20px;
-            margin-top: 10px;
-            display: inline-block;
-            text-decoration: none;
-            color: #fff;
-            background: #000;
+        .social-icons a {
+            margin: 0 5px;
         }
     </style>
 </head>
