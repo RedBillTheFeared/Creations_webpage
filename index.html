@@ -6,6 +6,9 @@
     <title>Creations</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16630826522"></script>
@@ -71,7 +74,7 @@
             overflow-x: hidden; /* Prevent horizontal scrolling */
             font-family: Arial, sans-serif;
         }
-        
+
         .about-content, .contact-content {
             display: flex;
             flex-wrap: wrap;
@@ -111,24 +114,28 @@
     <!-- Front Page Section -->
     <header class="front-page">
         <div class="overlay"></div>
+        <div class="particles-container" id="particles-js"></div>
         <h1>Creative Design Consultancy</h1>
         <p>Revolutionizing the way you plan your spaces</p>
-        <a href="#about-us" class="learn-more">Learn More</a>
+        <a href="#about-us" class="learn-more"><span>Learn More</span> <i class="fas fa-chevron-down"></i></a>
     </header>
 
     <!-- About Us Section -->
     <section id="about-us" class="about-us">
-        <h2>About Us</h2>
+        <h2 data-aos="fade-up">About Us</h2>
         <div class="about-content">
-            <div class="about-box">
+            <div class="about-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="about-icon"><i class="fas fa-eye"></i></div>
                 <h3>Our Vision</h3>
                 <p>At creations4all.in, our vision is to be the leading space design consulting firm in the industry. We aim to achieve this by constantly innovating and providing exceptional services that exceed our clients' expectations.</p>
             </div>
-            <div class="about-box">
+            <div class="about-box" data-aos="fade-up" data-aos-delay="200">
+                <div class="about-icon"><i class="fas fa-users"></i></div>
                 <h3>Our Team</h3>
                 <p>Our team comprises of highly skilled consultants with extensive experience in various industries. We are committed to delivering quality services to our clients and helping them achieve their business goals.</p>
             </div>
-            <div class="about-box">
+            <div class="about-box" data-aos="fade-up" data-aos-delay="300">
+                <div class="about-icon"><i class="fas fa-chart-line"></i></div>
                 <h3>Our Approach</h3>
                 <p>We take a data-driven approach to consulting, where we use advanced analytics and technology to provide insights that drive business decisions. Our approach is highly customizable to meet the unique needs of each client.</p>
             </div>
@@ -137,43 +144,81 @@
 
     <!-- Client Testimonials Section -->
     <section class="client-testimonials">
-        <h2>See What Our Clients Say</h2>
-        <div class="testimonials">
+        <h2 data-aos="fade-up">See What Our Clients Say</h2>
+        <div class="testimonials" data-aos="zoom-in" data-aos-delay="200">
             <p>Reviews coming soon!</p>
         </div>
     </section>
 
     <!-- Contact Us Section -->
     <section class="contact-us">
-        <h2>Contact Us</h2>
+        <h2 data-aos="fade-up">Contact Us</h2>
         <div class="contact-content">
-            <div class="contact-info">
-                <p>Better yet, see us in person!</p>
-                <p>Jeevan Plaza, Vipul Khand 2, Vipul Khand 3, Vipul Khand, Gomti Nagar, Lucknow, Uttar Pradesh, India</p>
-                <a href="https://wa.me/7704800140" class="contact-link">Contact us</a>
-                <p>Email: crtns4all@gmail.com</p>
-                <a href="mailto:crtns4all@gmail.com" class="contact-link">Drop us a line!</a>
+            <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <i class="fas fa-map-marker-alt contact-icon-large"></i>
+                        <h3>Our Location</h3>
+                    </div>
+                    <p>Jeevan Plaza, Vipul Khand 2</p>
+                    <p>Gomti Nagar, Lucknow</p>
+                    <p>Uttar Pradesh, India - 226010</p>
+                    <a href="https://goo.gl/maps/YourGoogleMapsLink" target="_blank" class="contact-link"><i class="fas fa-directions"></i> Get Directions</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <i class="fas fa-phone-alt contact-icon-large"></i>
+                        <h3>Get in Touch</h3>
+                    </div>
+                    <p><i class="fas fa-phone contact-icon"></i> +91 7704800140</p>
+                    <p><i class="fas fa-envelope contact-icon"></i> crtns4all@gmail.com</p>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/7704800140" class="contact-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="mailto:crtns4all@gmail.com" class="contact-link"><i class="fas fa-paper-plane"></i> Email Us</a>
+                    </div>
+                </div>
             </div>
-            <div id="map-container" style="width: 100%; height: auto;">
-                <!-- Placeholder content or a loading spinner can go here -->
+
+            <div class="map-wrapper" data-aos="fade-left" data-aos-delay="200">
+                <div id="map-container">
+                    <div class="map-loading-placeholder">
+                        <div class="loading-spinner"></div>
+                        <p>Loading map...</p>
+                    </div>
+                </div>
+                <div class="map-overlay">
+                    <div class="map-card">
+                        <h3><i class="far fa-clock"></i> Business Hours</h3>
+                        <p><span>Monday - Friday:</span> 9:00 AM - 6:00 PM</p>
+                        <p><span>Saturday:</span> 10:00 AM - 4:00 PM</p>
+                        <p><span>Sunday:</span> Closed</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <div class="subscribe">
+        <div class="subscribe" data-aos="fade-up">
             <h2>Subscribe</h2>
-            <form action="subscribe.php" method="post">
+            <form action="subscribe.php" method="post" class="subscribe-form">
                 <input type="email" name="email" placeholder="Email Address" required>
-                <button type="submit">Sign Up</button>
+                <button type="submit"><span>Sign Up</span></button>
             </form>
         </div>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/creations_4all/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61560357173133" target="_blank"><i class="fab fa-facebook"></i></a>
+
+        <div class="social-icons" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://www.instagram.com/creations_4all/" target="_blank" class="social-icon-wrapper" title="Follow us on Instagram">
+                <img src="images/instagram.svg" alt="Instagram" class="social-logo">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61560357173133" target="_blank" class="social-icon-wrapper" title="Like us on Facebook">
+                <img src="images/facebook.svg" alt="Facebook" class="social-logo">
+            </a>
         </div>
-        <p>&copy; 2025 Creations4All.in - All Rights Reserved.</p>
+
+        <p class="copyright">&copy; 2025 Creations4All.in - All Rights Reserved.</p>
     </footer>
 
     <!-- Tawk.to Script -->
@@ -191,18 +236,56 @@
     </script>
     <!--End of Tawk.to Script-->
 
-    <!-- Smooth Scroll Script -->
-    <script>
-        document.querySelector('.learn-more').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-        // Lazy Loading Map
+    <!-- Smooth Scroll and Animation Scripts -->
+    <script>
+        // Initialize AOS animations
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false,
+                disable: 'mobile'
+            });
+
+            // Initialize particles.js
+            particlesJS.load('particles-js', 'particles.json', function() {
+                console.log('particles.js loaded - callback');
+            });
+
+            // Add loading animation
+            const body = document.body;
+            const loader = document.createElement('div');
+            loader.className = 'loading';
+            loader.innerHTML = '<div class="loading-spinner"></div>';
+            body.appendChild(loader);
+
+            // Remove loader after page loads
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    loader.style.opacity = '0';
+                    setTimeout(function() {
+                        loader.style.display = 'none';
+                    }, 500);
+                }, 500);
+            });
+
+            // Smooth scroll for navigation
+            document.querySelector('.learn-more').addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+
+            // Lazy Loading Map
             let mapContainer = document.getElementById('map-container');
+            let mapPlaceholder = document.querySelector('.map-loading-placeholder');
+
             let observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -211,7 +294,23 @@
                         iframe.width = '100%';
                         iframe.height = '450';
                         iframe.style.border = '0';
+                        iframe.className = 'map-iframe';
                         iframe.allowFullscreen = '';
+                        iframe.loading = 'lazy';
+
+                        // Remove the loading placeholder when the iframe loads
+                        iframe.onload = function() {
+                            if (mapPlaceholder) {
+                                mapPlaceholder.style.display = 'none';
+
+                                // Add a class to the map wrapper to show it's loaded
+                                const mapWrapper = document.querySelector('.map-wrapper');
+                                if (mapWrapper) {
+                                    mapWrapper.classList.add('map-loaded');
+                                }
+                            }
+                        };
+
                         mapContainer.appendChild(iframe);
                         observer.unobserve(mapContainer);
                     }
@@ -219,6 +318,40 @@
             }, { threshold: 0.1 });
 
             observer.observe(mapContainer);
+
+            // Add back to top button
+            const backToTopBtn = document.createElement('button');
+            backToTopBtn.className = 'back-to-top';
+            backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            body.appendChild(backToTopBtn);
+
+            // Show/hide back to top button based on scroll position
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.style.display = 'block';
+                } else {
+                    backToTopBtn.style.display = 'none';
+                }
+            });
+
+            // Scroll to top when button is clicked
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Add subtle animations to elements on hover
+            const animateElements = document.querySelectorAll('.about-box, .contact-link, .social-icon-wrapper');
+            animateElements.forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    this.classList.add('animate-pulse');
+                });
+                element.addEventListener('mouseleave', function() {
+                    this.classList.remove('animate-pulse');
+                });
+            });
         });
     </script>
 </body>
